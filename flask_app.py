@@ -1,3 +1,21 @@
+'''
+.. epigraph::
+
+    *Its like asking why is Ludwig van Beethovens Ninth Symphony
+    beautiful. If you don't see why, someone can't tell you.
+    I know numbers are beautiful. If they aren't beautiful,
+    nothing is.*
+    -- Paul Erdos
+
+The Numbers API is for when you *really* must track your **favorite**
+**numbers**.
+
+.. warning::
+    This implementation does not persist data across sessions.
+    Also, if it is run with multiple server processes, their data
+    will not synchronize.
+'''
+
 from flask import Flask
 from flask import abort, request
 
@@ -51,8 +69,20 @@ class Numbers(Resource):
         return numbers
 
     def post(self):
-        """Post a new favorite number; server assigns the id"""
+        """Post a new favorite number; server assigns the id
 
+        Appends a favorite number with a description into the
+        collection, assigning it a unique identifier. Returns the new identifier.
+
+        :route: ``/my-api`` POST
+        :payload:
+           Submit a JSON object with:
+              * ``number``: the new favorite number (int)
+              * ``description``: reason it's a favorite (str)
+
+        :error: **400** if missing either ``number`` or ``description`` field
+        :return: Newly assigned identifier
+        """
         if not ('number' in request.form and 'description' in request.form):
             abort(400, "Payload must include number and description")
         global top_number

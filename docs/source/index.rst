@@ -10,6 +10,12 @@ Welcome to FRAP_flask's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+Numbers API
+===========
+The numbers API allows you to track why you like different numbers.
+
+.. automodule:: flask_app
+   :members:
 
 
 Indices and tables
