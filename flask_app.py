@@ -1,6 +1,8 @@
 '''
 .. epigraph::
 
+    * EDIT*
+
     *Its like asking why is Ludwig van Beethovens Ninth Symphony
     beautiful. If you don't see why, someone can't tell you.
     I know numbers are beautiful. If they aren't beautiful,
