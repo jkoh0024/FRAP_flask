@@ -1,5 +1,6 @@
-Lumache
-=======
+This is the Flask part of my FRAP (Flask-ReAct-Postgresql) project in learning full stack web development
+=========================================================================================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers that
-creates recipes mixing random ingredients
+Flask is used to create HTTP APIs for the simple web-app project
+
+Docs are here `Github Pages <https://jkoh0024.github.io/FRAP_flask/>`_
