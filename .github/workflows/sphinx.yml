@@ -3,7 +3,7 @@ name: "Sphinx: Render docs.yml"
 on:
   push:
     branches:
-      - main  # Replace with the branch where changes trigger the workflow
+      - master  # Replace with the branch where changes trigger the workflow
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/build/html/
